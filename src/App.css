@@ -1,0 +1,31 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+  }
+
+
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+html,body{
+	font-family: 'Montserrat', sans-serif, serif,'微軟正黑體','Times New Roman', Times ,arial;
+	overflow-x: hidden;
+	min-width: 360px;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+} 
