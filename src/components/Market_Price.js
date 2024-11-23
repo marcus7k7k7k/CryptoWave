@@ -2,13 +2,16 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './Market_Price.css';
 import Coin from './Coin';
+import { useNavigate } from 'react-router-dom';
 
 
 function Market_Price() {
 
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
+  // get API data
   useEffect(()=>{
     axios
     .get(
@@ -16,18 +19,27 @@ function Market_Price() {
     )
     .then(res => {
       setCoins(res.data);
-      console.log('get done')
+      // console.log('get done');
     })
-    .catch(error => console.log(error));
+    .catch( (error) => {
+      console.log(error);
+      alert('Failed to fetch coin data. Please try again later.');
+    });
   }, []);
 
-  const handleChange = e => {
+  // search input handling
+  const handleSearchChange = e => {
     setSearch(e.target.value)
   }
 
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
+  
+  const handleCoinClick = (coinID) => {
+    navigate(`/history/${coinID}`);
+  }
+
 
   return (
     <div className="coin-app">
@@ -38,7 +50,7 @@ function Market_Price() {
             type="text" 
             placeholder="Search" 
             className="coin-input" 
-            onChange={handleChange}
+            onChange={handleSearchChange}
           />
         </form>
 
@@ -53,6 +65,7 @@ function Market_Price() {
           volume={coin.total_volume}
           priceChange={coin.market_cap_change_percentage_24h}
           marketcap={coin.market_cap}
+          onClick={ () => handleCoinClick(coin.id) }
         />;
       })}
 

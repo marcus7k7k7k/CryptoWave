@@ -8,23 +8,27 @@ import './History_Price.css';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-function History_Price() {
+function History_Price( {coinID} ) {
 
-  // const [coin_ID, setCoin_ID] = useState([]);
   const [coinHistory, setCoinHistory] = useState([]);
 
   // Coin Historical Chart Data by ID
   useEffect(()=>{
+    if (!coinID) return;
+
     axios
     .get(
-      'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30'
+      `https://api.coingecko.com/api/v3/coins/${coinID}/market_chart?vs_currency=usd&days=30`
     )
     .then(res => {
       setCoinHistory(res.data.prices);
-      console.log('get done')
+      // console.log('get done')
     })
-    .catch(error => console.log(error));
-  }, []);
+    .catch( (error) => {
+      console.log(error);
+      alert('Failed to fetch coin data. Please try again later.');
+    });
+  }, [coinID]);
 
   // Prepare Chart Data
   const labels = coinHistory.map((priceData) => {
@@ -37,7 +41,7 @@ function History_Price() {
     labels: labels,
     datasets: [
       {
-        label: 'Bitcoin Price (USD)',
+        label: `${coinID} Price (USD)`,
         data: prices,
         borderColor: 'rgba(75, 192, 192, 1)',
         fill: false,

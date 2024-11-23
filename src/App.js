@@ -13,12 +13,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<HomePage />}> </Route>
-        <Route path="/market" exact element={<MarketPage />}> </Route>
-        <Route path="/history" exact element={<HistoryPage />}> </Route>
-        <Route path="/tradeplatform" exact element={<TradePlatformPage />}> </Route>
-        <Route path="/news" exact element={<NewsPage />}> </Route>
-        <Route path="/:others" element={<Navigate replace to="/" />}> </Route>
+        <Route path="/" element={<HomePage />}> </Route>
+        <Route path="/market" element={<MarketPage />}> </Route>
+        <Route path="/history/:coinID" element={<HistoryPage />}> </Route>
+        <Route path="/tradeplatform" element={<TradePlatformPage />}> </Route>
+        <Route path="/news" element={<NewsPage />}> </Route>
+        <Route path="*" element={<Navigate replace to="/" />}> </Route>
       </Routes>
     </BrowserRouter>
   );
