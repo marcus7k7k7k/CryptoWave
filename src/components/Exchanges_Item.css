@@ -1,0 +1,55 @@
+.exchange-item-container {
+    display: flex;
+    justify-content: center;
+}
+
+.exchange-row {
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    height: 80px;
+    width: 900px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.exchange-rank {
+    width: 100px;
+}
+
+.exchange {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width: 300px;
+}
+
+.exchange img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.exchange h1 {
+    font-size: 16px;
+    width: 150px;
+}
+
+.exchange-data {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.exchange-trustScore {
+    width: 110px;
+}
+
+.exchange-volume {
+    width: 200px;
+}
+
+.exchange-volumeNormalized {
+    width: 240px;
+}

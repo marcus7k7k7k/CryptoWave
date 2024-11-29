@@ -6,36 +6,27 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-        <div class="navbar">
-            <div class="container">
-                <a href="#!" class="brand">
+        <div className="navbar">
+            <div className="container">
+                <Link to="/" className="brand">
                     <h1>CryptoWave</h1>
-                </a>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <Link to="/">Home</Link>
-                        </a>
+                </Link>
+    
+                <ul className="nav">
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link">Home</Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <Link to="/market">Market</Link>
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/market" className="nav-link">Market</Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <Link to="/tradeplatform">TradePlatform</Link>
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/exchanges" className="nav-link">Exchanges</Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <Link to="/news">News</Link>
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/news" className="nav-link">News</Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <Link to="/FAQ">FAQ</Link>
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/FAQ" className="nav-link">FAQ</Link>
                     </li>
                 </ul>
             </div>
