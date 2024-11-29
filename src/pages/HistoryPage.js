@@ -1,13 +1,16 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
-import History_Price from "../components/History_Price";
+import { useLocation } from 'react-router-dom';
 import DefaultLayout from '../components/layout/DefaultLayout'
+import History_Coin_Info from "../components/History_Coin_Info";
+import History_Price from "../components/History_Price";
+import './HistoryPage.css';
 
 const HistoryPage = () => {
-  // get coin ID from URL
-  const { coinID } = useParams(); 
+  // check NEED
+  const location = useLocation();
+  const state = location.state;
 
-  if (!coinID) {
+  if (!state) {
     return (
       <DefaultLayout>
         <div>Failed to fetch coin data. Please try again later.</div>
@@ -15,9 +18,27 @@ const HistoryPage = () => {
     );
   }
 
+  const {coinID, image, name, symbol, price, volume, priceChange, marketcap} = state;
+  console.log("coinID in HistoryPage:", coinID);
+
   return (
     <DefaultLayout>
-      <History_Price coinID={coinID} />
+      <div className="history-page-container">
+        <div className="coin-info-container">
+          <History_Coin_Info
+            image={image}
+            name={name}
+            symbol={symbol}
+            price={price}
+            volume={volume}
+            priceChange={priceChange}
+            marketcap={marketcap}
+          />
+        </div>
+        <div className="history-chart-container">
+          <History_Price coinID={coinID} />
+        </div>
+      </div>
     </DefaultLayout>
   )
 }

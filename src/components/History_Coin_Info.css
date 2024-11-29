@@ -1,0 +1,37 @@
+.coin-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.coin-info-container .coin {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 48px;
+}
+
+.coin-info-container .coin h1 {
+    font-size: 24px;
+}
+
+.coin-info-container .coin-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.coin-info-container .coin-data p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: 1px solid #d7d7d7;
+    width: 100%;
+}
+

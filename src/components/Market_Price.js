@@ -2,14 +2,11 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './Market_Price.css';
 import Coin from './Coin';
-import { useNavigate } from 'react-router-dom';
-
 
 function Market_Price() {
 
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
-  const navigate = useNavigate();
 
   // get API data
   useEffect(()=>{
@@ -19,7 +16,6 @@ function Market_Price() {
     )
     .then(res => {
       setCoins(res.data);
-      // console.log('get done');
     })
     .catch( (error) => {
       console.log(error);
@@ -35,11 +31,6 @@ function Market_Price() {
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
-  
-  const handleCoinClick = (coinID) => {
-    navigate(`/history/${coinID}`);
-  }
-
 
   return (
     <div className="coin-app">
@@ -58,6 +49,7 @@ function Market_Price() {
       {filteredCoins.map(coin => {
         return <Coin
           key={coin.id}
+          coinID={coin.id}
           image={coin.image}
           name={coin.name}
           symbol={coin.symbol}
@@ -65,7 +57,6 @@ function Market_Price() {
           volume={coin.total_volume}
           priceChange={coin.market_cap_change_percentage_24h}
           marketcap={coin.market_cap}
-          onClick={ () => handleCoinClick(coin.id) }
         />;
       })}
 
