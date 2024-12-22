@@ -6,7 +6,6 @@ import HomePage from "./pages/Homepage";
 import MarketPage from './pages/MarketPage'; 
 import HistoryPage from './pages/HistoryPage';
 import ExchangesPage from './pages/ExchangesPage';
-import NewsPage from './pages/NewsPage';
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
         <Route path="/market" element={<MarketPage />}> </Route>
         <Route path="/history/:coinID" element={<HistoryPage />}> </Route>
         <Route path="/exchanges" element={<ExchangesPage />}> </Route>
-        <Route path="/news" element={<NewsPage />}> </Route>
         <Route path="*" element={<Navigate replace to="/" />}> </Route>
       </Routes>
     </BrowserRouter>
