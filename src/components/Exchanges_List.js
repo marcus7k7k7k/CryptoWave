@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import './Exchanges_List.css';
+import './Exchanges_List_&_Item.css';
 import Exchanges_Item from './Exchanges_Item';
 
 function Exchanges_List() {
@@ -13,7 +13,7 @@ function Exchanges_List() {
   useEffect(()=>{
     axios
     .get(
-      'https://api.coingecko.com/api/v3/exchanges?per_page=50&page=1'
+      'https://api.coingecko.com/api/v3/exchanges?per_page=100&page=1'
     )
     .then(res => {
       setExchanges(res.data);
@@ -46,6 +46,22 @@ function Exchanges_List() {
             onChange={handleSearchChange}
           />
         </form>
+      </div>
+
+      <div className="exchange-header">
+        <div className="exchange-row">
+          <div className="exchange-rank">
+            <p>#</p>
+          </div>
+          <div className="exchange">
+            <p>Exchange</p>
+          </div>
+          <div className="exchange-data">
+            <p className="exchange-trustScore">Trust Score</p>
+            <p className="exchange-volume">24h Volume</p>
+            <p className="exchange-volumeNormalized">24h Volume (Normalized)</p>
+          </div>
+        </div>
       </div>
 
       {filteredExchanges.map(exchange => {

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.exchanges-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  background-color: #1a1a1c;
+  color: #fff;
+}
+
+.exchange-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 32px;
+}
+
+.exchange-text {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.exchange-input {
+  padding-left: 16px;
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  color: #e2e2e2; 
+  background-image: linear-gradient(
+    -225deg,
+    #BF843B 0%,
+    #FFBF00 48%,
+    #F2CA50 100%
+  );
+}
+
+.exchange-input::placeholder {
+  color: #e2e2e2;
+}
+
+/* Chart Item */
+
+.exchange-item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.exchange-row {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  height: 80px;
+  width: 900px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.exchange-rank {
+  width: 100px;
+}
+
+.exchange {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  min-width: 300px;
+}
+
+.exchange img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.exchange h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+.exchange-data {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.exchange-trustScore {
+  width: 90px;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 6px;
+}
+/* Score tag */
+.trust-high {
+  background-color: #D1FADF;
+  color: #12B76A;
+  font-weight: bold;
+  font-size: 14px;
+}
+.trust-mid {
+  background-color: #FEF7C3;
+  color: #F79009;
+  font-weight: bold;
+  font-size: 14px;
+}
+.trust-low {
+  background-color: #FEE4E2;
+  color: #D92D20;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.exchange-volume {
+  width: 200px;
+  text-align: right;
+}
+
+.exchange-volumeNormalized {
+  width: 260px;
+  text-align: right;
+}

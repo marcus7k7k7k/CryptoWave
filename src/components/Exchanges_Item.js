@@ -1,7 +1,13 @@
 import React from 'react'
-import './Exchanges_Item.css'
+import './Exchanges_List_&_Item.css'
 
 const Exchanges_Item = ({ name, image, trustScore, scoreRank, volume, volumeNormalized }) => {
+  
+  const getTrustScoreColor = (score) => {
+    if (score >= 9) return 'trust-high';
+    if (score >= 7) return 'trust-mid';
+    return 'trust-low';
+  };
   
   return (
     <div className='exchange-item-container'>
@@ -11,10 +17,10 @@ const Exchanges_Item = ({ name, image, trustScore, scoreRank, volume, volumeNorm
         </div>
         <div className="exchange">
           <img src={image} alt="exchange" />
-          <h1>{name}</h1>
+          <p>{name}</p>
         </div>
         <div className="exchange-data">
-          <p className="exchange-trustScore">{trustScore}/10</p>
+          <p className={`exchange-trustScore ${getTrustScoreColor(trustScore)}`}>{trustScore}/10</p>
           <p className="exchange-volume">${volume ?volume.toLocaleString() : 'N/A'}</p>
           <p className="exchange-volumeNormalized">${volumeNormalized ?volumeNormalized.toLocaleString() : 'N/A'}</p>
         </div>
