@@ -90,7 +90,7 @@ function History_Price( {coinID} ) {
     scales: {
       x: {
         grid: {
-          color: '#555', 
+          color: '#666', 
         },
         ticks: {
           color: '#fff', 
@@ -110,7 +110,7 @@ function History_Price( {coinID} ) {
       },
       y: {
         grid: {
-          color: '#555', 
+          color: '#666', 
         },
         ticks: {
           color: '#fff', 

@@ -78,7 +78,7 @@ const Homepage = () => {
             <h2>Market</h2>
             <p>Live Cryptocurrency Prices</p>
           </div>
-          <div className="feature-card" onClick={() => navigate('/exchange')}>
+          <div className="feature-card" onClick={() => navigate('/exchanges')}>
             <h2>Exchanges</h2>
             <p>Compare Top Exchanges</p>
           </div>

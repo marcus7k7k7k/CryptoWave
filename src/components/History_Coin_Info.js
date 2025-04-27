@@ -10,17 +10,17 @@ const History_Coin_Info = ( {image, name, symbol, price, volume, priceChange, ma
                 <p className="coin-symbol">{symbol}</p>
             </div>
             <div className="coin-data">
-                <p className="coin-price">Price: ${price}</p>
-                <p className="coni-volume">Volume: ${volume ?volume.toLocaleString() : 'N/A'}</p>
+                <p className="coin-price">Price:  ${price}</p>
+                <p className="coin-volume">Volume:  ${volume ?volume.toLocaleString() : 'N/A'}</p>
                 { priceChange !== null && priceChange !== undefined ?
                 (
                     <p className={`coin-percent ${priceChange > 0 ? 'green' : 'red' }`}>
-                        Price Change: {priceChange.toFixed(2)}%
+                        Price Change:  {priceChange.toFixed(2)}%
                     </p> 
                 ):(
                     <p className="coin-percent">N/A</p>
                 )}
-                <p className="coin-marketcap">Mkt Cap: ${marketcap.toLocaleString()}</p>
+                <p className="coin-marketcap">Mkt Cap:  ${marketcap.toLocaleString()}</p>
             </div>
         </div>
     )

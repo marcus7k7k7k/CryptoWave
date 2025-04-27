@@ -6,7 +6,6 @@ import History_Price from "../components/History_Price";
 import './HistoryPage.css';
 
 const HistoryPage = () => {
-  // check NEED
   const location = useLocation();
   const state = location.state;
 

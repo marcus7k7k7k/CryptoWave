@@ -17,6 +17,7 @@
 
 .coin-info-container .coin h1 {
     font-size: 24px;
+    padding-right: 12px;
 }
 
 .coin-info-container .coin-data {
@@ -24,7 +25,7 @@
     flex-direction: column;
     width: 100%;
     font-size: 16px;
-    line-height: 36px;
+    line-height: 48px;
 }
 
 .coin-info-container .coin-data p {
