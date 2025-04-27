@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { Link } from "react-router-dom";
+// import logo from '../../images/logo.png';
 
 
 const Header = () => {
@@ -9,6 +10,7 @@ const Header = () => {
         <div className="navbar">
             <div className="container">
                 <Link to="/" className="brand">
+                    {/* <img src={logo} alt="CryptoWave Logo" className="logo-img" /> */}
                     <h1>CryptoWave</h1>
                 </Link>
     
