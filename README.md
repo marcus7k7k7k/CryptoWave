@@ -8,6 +8,8 @@ Built using **JavaScript**, **React.js**, **Chart.js**, **Axios**, and the **Coi
 Every design element—from vibrant gold gradients to smooth particle backgrounds—reflects a commitment to crafting a polished and user-friendly crypto experience.  
 Perfect for showcasing front-end development skills, data visualization, and API integration! 🚀
 
+## 🌐 Live Demo
+[👉 Visit CryptoWave on GitHub Pages](https://marcus7k7k7k.github.io/CryptoWave)
 
 ## 🧩 Built with
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)

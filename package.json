@@ -1,4 +1,5 @@
 {
+  "homepage": "https://marcus7k7k7k.github.io/CryptoWave",
   "name": "crypto_market_price",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
