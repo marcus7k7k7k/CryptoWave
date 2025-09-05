@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/CryptoWave/static/css/main.208e2452.css",
+    "main.js": "/CryptoWave/static/js/main.3f0c5b26.js",
+    "static/media/logo.png": "/CryptoWave/static/media/logo.f8cf1faf110b19098913.png",
+    "index.html": "/CryptoWave/index.html",
+    "main.208e2452.css.map": "/CryptoWave/static/css/main.208e2452.css.map",
+    "main.3f0c5b26.js.map": "/CryptoWave/static/js/main.3f0c5b26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.208e2452.css",
+    "static/js/main.3f0c5b26.js"
+  ]
+}
